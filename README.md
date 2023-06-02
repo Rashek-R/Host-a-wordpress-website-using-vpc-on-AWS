@@ -173,7 +173,25 @@ Hosting a WordPress website using a Virtual Private Cloud (VPC) on AWS provides 
  
  ![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/3bc521bb-f8fd-4006-b5a2-c5ced818e0b5)
 
+##### NOTE:We cannot directly ssh to "frontend" or "backend" server.We can only access "frontend" and "backend" through "bastion" server'
  
+ ### Step 12: SSH to server
+ 
+ ![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/bf1e18ba-bac2-475f-b33b-cd8cf23170ce)
+
+#### Now from bastion server we can ssh to both frondend and backend server
+
+### Step 13: Install database server in backend
+
+##### insatll  "mariadb"
+
+ 
+
+##### install "mysql"
+
+##### set passwrod for root
+##### sudo mysql_secure_installation
+
 
  
  
