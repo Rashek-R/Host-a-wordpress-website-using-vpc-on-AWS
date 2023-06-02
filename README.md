@@ -111,7 +111,7 @@ Hosting a WordPress website using a Virtual Private Cloud (VPC) on AWS provides 
 
 ![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/b2dd4fe4-4701-4225-9574-35451460fe7e)
 
-#### Step 9: Subnet association
+### Step 9: Subnet association
 
 #####  Right click "edit subnet associations". , select private subnet click "save associations".
 
@@ -120,7 +120,31 @@ Hosting a WordPress website using a Virtual Private Cloud (VPC) on AWS provides 
 
 ##### Note: By default all subnet will be associated with default route
 
-#### Step 10:Create Security Group
+### Step 10:Create Security Group
+
+#### creating 3 security groups for 3 instance we are going to create.
+              1>bastion sg
+              2>frontend sg
+              3>backend sg
+              
+ ##### NOTE:A bastion host is a special-purpose computer on a network specifically designed and configured to withstand attacks
+ 
+ ##### 1:Security group for bastion server,here im using sg name as "bastion sg"."Add inbound rule" as current device ip and
+ ##### "outboung rule" all traffic is allowed
+ 
+ 
+ ![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/d45f7172-3386-477e-81a3-e76b8f8bd9cb)
+![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/5479ffbe-8aac-4cde-99f8-ee7a15c7d6a6)
+![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/10696be2-2d17-4eb9-bf9a-e56d6a4865c0)
+
+ 
+ 
+ 
+              
+              
+
+
+
 
 
 
