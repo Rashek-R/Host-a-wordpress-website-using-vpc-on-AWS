@@ -111,6 +111,10 @@ Hosting a WordPress website using a Virtual Private Cloud (VPC) on AWS provides 
 
 ![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/b2dd4fe4-4701-4225-9574-35451460fe7e)
 
+#### Step 9: Subnet association
+
+#####  Right click "edit subnet associations". , select private subnet click "save associations".
+
 
 
 
