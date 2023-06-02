@@ -318,6 +318,41 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
        >| information_schema |
        >+--------------------+
        >2 rows in set (0.000 sec)
+       
+ ### Step 14: Install httpd,php and php-mysqlnd on frondend
+ 
+    > $ sudo yum install httpd php php-mysqlnd
+    >$ sudo systemctl restart php-fpm.service httpd.service
+    >$ sudo systemctl enable php-fpm.service httpd.service
+
+### Step 15: Install wordpress on frondend
+
+    >wget https://wordpress.org/wordpress-6.0.tar.gz
+    >tar -xvf wordpress-6.0.tar.gz
+    
+ ### Step 16: Copy wordpress extracted files to /var/www/html
+ 
+     >sudo cp -r wordpress/*  /var/www/html/
+     
+ ### Step 17: Editing /var/www/html/wp-config.php file
+ 
+    >Intially we rename "wp-config-sample.php" to "wp-config.php"
+    >wp-config-sample.php wp-config.ph
+
+   >Edit wp-config.php file
+   >vi wp-config.php
+
+   >Provide below details
+   >Database name, username,userpassword and host ip
+   
+  ![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/8b67906a-796a-4974-9180-a9fd894fb613)
+  
+ ####  Installation completed
+ 
+ ##### Now once you call the frontend server "public dns" name using http (port 80) you should be able to access wordpress
+ 
+ ![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/ffb2ad9d-fcac-419f-902d-6d47459ba3ea)
+
 
 
 
