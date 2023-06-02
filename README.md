@@ -342,8 +342,8 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
    >Edit wp-config.php file
    >vi wp-config.php
 
-   > Provide below details
-   > Database name, username,userpassword and host ip
+   >Provide below details
+   >Database name, username,userpassword and host ip
    
   ![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/8b67906a-796a-4974-9180-a9fd894fb613)
   
