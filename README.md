@@ -91,6 +91,27 @@ Hosting a WordPress website using a Virtual Private Cloud (VPC) on AWS provides 
 ![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/128e0efe-45bd-4ee0-a7b3-71d99b02fdbf)
 ![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/3bb9453d-b392-490c-a040-4ba559de9625)
 
+### Step 7: Edit default routing table of our vpc
+
+#### Select the default route and in "Action" option choose "Edit routes"
+
+![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/3fc2e7ce-c912-4371-a71c-28befb91817a)
+
+#### Then click "add route", under "destination", type in "0.0.0.0/0" in the box. After that, under "target", select "internet gateway", then click "save changes"
+
+![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/3c8db290-4b18-4530-bdb5-54edc793675a)
+
+### Step 8: Create another route table for private subnet
+
+![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/b8725a8b-b509-4d76-9f42-9dc738c82b7f)
+
+![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/90c15ac6-d062-4ff9-9db6-e38f09b7efbd)
+
+#### Next step add a route to the private route table to route traffic to the internet through the nat gateway in the public subnet .
+
+![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/b2dd4fe4-4701-4225-9574-35451460fe7e)
+
+
 
 
 
