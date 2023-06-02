@@ -115,6 +115,14 @@ Hosting a WordPress website using a Virtual Private Cloud (VPC) on AWS provides 
 
 #####  Right click "edit subnet associations". , select private subnet click "save associations".
 
+![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/2b19a9f6-27a8-4aa1-a8f8-c2348236fd17)
+![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/08a8f3e7-7e6d-4819-97b4-46bf74350af8)
+
+##### Note: By default all subnet will be associated with default route
+
+#### Step 10:Create Security Group
+
+
 
 
 
