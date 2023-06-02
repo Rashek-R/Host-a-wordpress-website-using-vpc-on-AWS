@@ -80,6 +80,19 @@ Hosting a WordPress website using a Virtual Private Cloud (VPC) on AWS provides 
 
 ##### NOTE: Enable "auto-assign public ipv4 address" for 2nd public subnet also
 
+### Step6:Create NAT Gateways in the Public Subnets
+
+#### Select "natgateway" in the vpc dashboard and click "create nat gateways"
+
+![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/42cc734f-d7e0-438a-b2ce-69912502b9a3)
+
+#### Give the name , select one of the public subnet,under "elastic ip allocation id", click "allocate elastic ip","create nat gateway".
+
+![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/128e0efe-45bd-4ee0-a7b3-71d99b02fdbf)
+![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/3bb9453d-b392-490c-a040-4ba559de9625)
+
+
+
 
 
 
