@@ -129,13 +129,51 @@ Hosting a WordPress website using a Virtual Private Cloud (VPC) on AWS provides 
               
  ##### NOTE:A bastion host is a special-purpose computer on a network specifically designed and configured to withstand attacks
  
- ##### 1:Security group for bastion server,here im using sg name as "bastion sg"."Add inbound rule" as current device ip and
+ ##### 1:Security group for bastion,here im using sg name as "bastion sg"."Add inbound rule" as current ip of device and
  ##### "outboung rule" all traffic is allowed
+ 
+ ###### NOTE:Select the vpc as we created 
  
  
  ![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/d45f7172-3386-477e-81a3-e76b8f8bd9cb)
 ![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/5479ffbe-8aac-4cde-99f8-ee7a15c7d6a6)
 ![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/10696be2-2d17-4eb9-bf9a-e56d6a4865c0)
+
+
+ ##### 2:Security group for frondend ,here im using sg name as "frontend sg".Three "Add inbound rule">>ssh from "bastion security group id" ,http from "any 
+ ##### ipv4",httpfrom "any ipv4"."Outboung rule">> all traffic is allowed
+ 
+ ![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/7977b06c-8a7c-4fb8-ac4f-258f3223e778)
+ 
+ ##### 3:Security group for backend ,here im using sg name as "frontend sg".Two "Add inbound rule">>ssh from "bastion security group id",
+ #####  Allow "3306(mysql/aurora)" from "frontend-id"."Outboung rule">> all traffic is allowed
+ 
+ ![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/87a13b41-a706-4259-b4e6-068f210343c5)
+ 
+ ### Step 11: Launch the setup server (Ec2 instance)
+ 
+ ##### Here we have to setup 3 instance
+       1>bastion
+       2>frondend
+       3>backend
+       
+ ##### 1:bastion instance.
+ ###### NOTE:Add name>>Select the created VPC>>Select one of the public subnet>>Select "existing security group" and add "bastion-sg" security group
+ 
+ ![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/c5a48dc9-c205-4fd7-82e7-e3cf284b31f6)
+ 
+ ##### 2:frondend instance.
+ ###### NOTE:Add name>>Select the created VPC>>Select one of the public subnet>>Select "existing security group" and add "frondend-sg" security group
+ 
+ ![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/86761023-3687-46a0-b716-2d9af4e50696)
+
+
+  ##### 3:backend instance.
+ ###### NOTE:Add name>>Select the created VPC>>Select one of the private subnet>>Select "existing security group" and add "backend-sg" security group
+ 
+ ![image](https://github.com/Rashek-R/Host-a-wordpress-website-using-vpc-on-AWS/assets/134732001/3bc521bb-f8fd-4006-b5a2-c5ced818e0b5)
+
+ 
 
  
  
